@@ -1,8 +1,11 @@
 import { Dialog, Transition } from "@headlessui/react";
+import classNames from "classnames";
 import { Fragment, useState } from "react";
 
 function Subscribe() {
   let [isOpen, setIsOpen] = useState(false);
+  const [button1Active, setButton1Active] = useState(false);
+  const [button2Active, setButton2Active] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -11,12 +14,26 @@ function Subscribe() {
   function openModal() {
     setIsOpen(true);
   }
+
+  const [activeButton, setActiveButton] = useState(null);
+
+  const handleButtonClick = (buttonNumber) => {
+    if (activeButton === buttonNumber) {
+      // Eğer tıklanan buton zaten aktifse, pasif hale getir
+      setActiveButton(null);
+    } else {
+      // Değilse, tıklanan butonu aktif yap
+      setActiveButton(buttonNumber);
+    }
+  };
   return (
     <>
       <div className="bg-zinc-900 bg-opacity-85 rounded-2xl mt-3">
         <div className="p-4 -ml-1 ">
           <div>
-            <div className=" text-xl font-bold ">Premium'a Abone Ol</div>
+            <div className=" text-xl font-extrabold antialiased">
+              Premium'a Abone Ol
+            </div>
           </div>
           <div>
             <div className="text-md font-semibold pt-1 ">
@@ -28,7 +45,7 @@ function Subscribe() {
             <button
               type="button"
               onClick={openModal}
-              className="rounded-full bg-blue-500 px-4 py-1.5 text-sm font-bold text-white  hover:bg-opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              className="rounded-full bg-blue-500 px-4 py-1.5 text-sm font-bold text-white  hover:bg-opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 antialiased"
             >
               Abone Ol
             </button>
@@ -60,23 +77,30 @@ function Subscribe() {
                       <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-black p-6 text-left align-middle shadow-xl transition-all">
                         <Dialog.Title
                           as="h3"
-                          className="text-2xl font-bold leading-10 text-white justify-center text-center pt-4"
+                          className="text-3xl font-bold leading-10 text-white justify-center text-center pt-4 mx-4"
                         >
                           Hesabının türü hangisi?
                         </Dialog.Title>
                         <div className="justify-center text-center p-4">
-                          <div className="mt-2 p-4">
+                          <div className="mt-2 p-4 m-4">
                             <p className="text-sm text-white justify-center text-center">
                               Sana uygun doğru aboneliği seç:
                             </p>
                           </div>
 
-                          <div className=" flex justify-around p-4">
+                          <div className=" flex justify-center items-center ">
                             <button
                               type="button"
-                              className="justify-center items-center
-                              bg-black m-2 py-6 px-2 text-sm font-medium text-white hover:bg-gray-800  focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 border border-blue-500 rounded-lg w-1/2"
-                              onClick={closeModal}
+                              onClick={() => handleButtonClick(1)}
+                              className={classNames(
+                                activeButton === 1
+                                  ? " m-1 rounded-xl bg-black pt-4  hover:bg-gray-700 px-7 py-7"
+                                  : " m-1 rounded-xl bg-black pt-4  hover:bg-gray-500 px-7 py-7",
+                                {
+                                  "border border-white bg-gray-950 bg-opacity-75":
+                                    activeButton === 1,
+                                }
+                              )}
                             >
                               <div className="text-gray-400 justify-start text-left">
                                 <small>Premium</small>
@@ -88,11 +112,17 @@ function Subscribe() {
                             </button>
                             <button
                               type="button"
-                              className="inline-flex justify-center rounded-lg
-                             border border-transparent bg-black m-2 py-6 px-2 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-1/2"
-                              onClick={closeModal}
+                              onClick={() => handleButtonClick(2)}
+                              className={classNames(
+                                activeButton === 2
+                                  ? "p-2 m-1 rounded-xl bg-black pt-4  hover:bg-gray-700 px-7 py-7 "
+                                  : "p-2 m-1 rounded-xl bg-black pt-4  hover:bg-gray-700 px-7 py-7",
+                                {
+                                  "border border-white ": activeButton === 2,
+                                }
+                              )}
                             >
-                              <div className="text-gray-400 justify-start text-left">
+                              <div className="text-gray-400 justify-center text-left">
                                 <small>Onaylı Kuruluşlar</small>
                                 <p className="text-white">Kuruluşum</p>
                                 <small>
@@ -103,7 +133,10 @@ function Subscribe() {
                             </button>
                           </div>
                           <div className="mt-4">
-                            <button className="text-black bg-white w-full rounded-full p-4 font-bold hover:bg-gray-200">
+                            <button
+                              className="text-black bg-white w-full rounded-full p-4 font-bold hover:bg-gray-200"
+                              onClick={closeModal}
+                            >
                               Abone ol
                             </button>
                           </div>
