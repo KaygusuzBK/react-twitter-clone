@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import Topic from "./topic";
-import {topics} from "../../../../utils/consts";
-
+import { topics } from "../../../../utils/consts";
 
 function Topics() {
   return (
@@ -11,11 +9,10 @@ function Topics() {
           <div className="font-bold text-white text-lg p-2">
             İlgini çekebilecek gündemler
           </div>
-          <div className="flex flex-wrap justify-start items-center">
-          {topics.map((topic) => (
-            <Topic key={topic.value} topic={topic} />
-          ))}
-
+          <div className="flex flex-col max-h-full overflow-y-auto">
+            {topics.map((topic) => (
+              <Topic key={topic.value} topic={topic} />
+            ))}
           </div>
         </div>
       </div>

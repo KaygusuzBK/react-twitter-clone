@@ -1,8 +1,8 @@
 import classNames from "classnames";
-import { FaArrowLeft, FaThumbtack } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { NavLink, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { BsBalloon, BsCalendar, BsCalendar2, BsCalendar2Check, BsCalendar2Date, BsCalendarPlus } from "react-icons/bs";
+import { BsBalloon, BsCalendar2Date } from "react-icons/bs";
 
 export default function Profile() {
   const { slug } = useParams();
