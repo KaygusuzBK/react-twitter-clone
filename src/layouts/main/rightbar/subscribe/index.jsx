@@ -28,7 +28,7 @@ function Subscribe() {
   };
   return (
     <>
-      <div className="bg-zinc-900 bg-opacity-85 rounded-2xl mt-3">
+      <div className="bg-zinc-900 bg-opacity-85 rounded-xl mt-3">
         <div className="p-4 -ml-1 ">
           <div>
             <div className=" text-xl font-extrabold antialiased">

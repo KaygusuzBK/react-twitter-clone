@@ -14,13 +14,13 @@ export default function Profile() {
       <div className="flex justify-start items-center">
         <div className="flex justify-center items-center">
           <NavLink to="/">
-            <FaArrowLeft className="text-white text-md rounded-full border border-black m-3 w-10 h-10 hover:bg-gray-700 hover:bg-opacity-80 p-3" />
+            <FaArrowLeft className="text-white text-md rounded-full border border-black m-3 w-10 h-10 hover:bg-gray-700 hover:bg-opacity-80 p-3 -mr-0.5" />
           </NavLink>
         </div>
         <div className="flex flex-col justify-center items-start ">
           <p className="text-lg font-bold">{slug}</p>
           <small className="font-light text-sm text-white text-opacity-50">
-            31 gönderi
+            {currentAccount.info.tweets.length} gönderi
           </small>
         </div>
       </div>
@@ -39,11 +39,11 @@ export default function Profile() {
           <img
             src={currentAccount.avatar}
             alt="profile"
-            className="w-36 h-36 object-cover rounded-full border-2 border-black -mt-14"
+            className="w-36 h-36 object-cover rounded-full border-4 border-black -mt-16"
           />
         </div>
         <div className="mr-6 -mt-1">
-          <button className="bg-black text-white text-md border  font-bold py-1 px-2 rounded-full">
+          <button className="bg-black text-white text-md border font-medium py-1 px-2 rounded-full">
             Profili düzenle
           </button>
         </div>
