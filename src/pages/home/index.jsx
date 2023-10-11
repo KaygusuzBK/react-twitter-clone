@@ -1,5 +1,5 @@
 import PostChoice from "./postChoice";
-import WhereIsThis from "../../components/whereIsThis";
+import WhereIsThis from "~/components/whereIsThis";
 
 export default function Home() {
   return (

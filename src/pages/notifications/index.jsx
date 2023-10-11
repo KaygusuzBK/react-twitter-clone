@@ -1,4 +1,4 @@
-import WhereIsThis from "../../components/WhereIsThis";
+import WhereIsThis from "~/components/whereIsThis";
 
 export default function Notifications() {
   return (

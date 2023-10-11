@@ -1,5 +1,5 @@
 import { useState } from "react";
-import OtherButton from "../../../components/otherButton";
+import OtherButton from "~/components/OtherButton";
 import classNames from "classnames";
 
 function PostChoice() {
