@@ -11,13 +11,16 @@ function Topic({ topic }) {
           <div className="flex flex-row justify-between items-center w-full">
             <div className="font-bold text-base">{topic.topic.value}</div>
             <div className="justify-end items-center flex flex-row">
-              <button 
-              onClick={() => alert("Takip edildi")}
-              className="rounded-full hover:bg-blue-600 hover:text-black bg-opacity-50 px-3" >...</button>
+              <button
+                onClick={() => alert("Takip edildi")}
+                className="rounded-full hover:bg-blue-600 hover:text-black bg-opacity-50 px-3"
+              >
+                ...
+              </button>
             </div>
           </div>
           <div className="text-white text-opacity-50 text-sm font-thin">
-            {topic.postCount}posts
+            {topic.postCount}
           </div>
         </div>
       </div>

@@ -21,14 +21,6 @@ export default function New() {
   const { currentAccount } = useSelector((state) => state.auth);
   var textarea = useRef();
 
-  var textareaValue = textarea.current?.value;
-  var textareaValueLength = textareaValue?.length;
-
-  useEffect(() => {
-    console.log(textareaValue);
-    console.log(textareaValueLength);
-  }, [textarea]);
-
   return (
     <>
       <div className="py-4 w-[90%]">

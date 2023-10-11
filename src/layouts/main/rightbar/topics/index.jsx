@@ -10,8 +10,8 @@ function Topics() {
             İlgini çekebilecek gündemler
           </div>
           <div className="flex flex-col max-h-full overflow-y-auto">
-            {topics.map((topic) => (
-              <Topic key={topic.value} topic={topic} />
+            {topics.map((topic, index) => (
+              <Topic key={index} topic={topic} />
             ))}
           </div>
         </div>
