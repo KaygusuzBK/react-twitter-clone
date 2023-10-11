@@ -55,7 +55,7 @@ export default function New() {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-start justify-center pt-14 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -65,11 +65,11 @@ export default function New() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-black p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-3xl bg-black px-5 py-4 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title>
                     <div className="flex flex-row justify-between items-center mb-4 -m-2 p-2">
                       <button onClick={closeModal}>
-                        <FaTimes className="text-white rounded-full hover:bg-zinc-800 hover:bg-opacity-50 p-1 w-5 h-5" />
+                        <FaTimes className="text-white rounded-full hover:bg-zinc-500 hover:bg-opacity-50 p-1 w-6 h-6" />
                       </button>
                       <button className="text-blue-500 font-bold">
                         Tasklaklar
@@ -84,13 +84,13 @@ export default function New() {
                     />
                     <textarea
                       ref={textarea}
-                      className="  rounded-lg w-full h-52 bg-black text-white placeholder-zinc-400 placeholder-opacity-40 p-2 m-1 -mr-2 focus:outline-none resize-none"
+                      className="  rounded-lg w-full h-40 bg-black text-white placeholder-zinc-400 placeholder-opacity-40 p-2 m-1 -mr-2 focus:outline-none resize-none"
                       placeholder="Ay noluyo noluyo?"
                     />
                   </div>
                   <hr className="border-zinc-300 border-opacity-20 mt-5 -ml5 mr-5"></hr>
                   {/* ALT PANEL */}
-                  <div className="flex flex-row justify-between items-center mt-5">
+                  <div className="flex flex-row justify-between items-center mt-3">
                     <div className="flex flex-row justify-between items-center">
                       <GoFileMedia className="text-blue-500 rounded-lg h-8 w-8 hover:bg-blue-500 hover:bg-opacity-20 p-2 " />
                       <AiOutlineGif className="text-blue-500 rounded-lg h-8 w-8 hover:bg-blue-500 hover:bg-opacity-20 p-2 " />
