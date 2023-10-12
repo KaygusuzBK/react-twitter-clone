@@ -1,7 +1,7 @@
-function OtherButton({ isActive }) {
-  const buttonClassName = isActive ? "active-button" : "inactive-button";
-
-  return <button className={buttonClassName} />;
+function OtherButton({ isActive, ...props }) {
+  return (
+    <button className={`other-button ${isActive ? "active" : ""}`} {...props} />
+  );
 }
 
 export default OtherButton;
