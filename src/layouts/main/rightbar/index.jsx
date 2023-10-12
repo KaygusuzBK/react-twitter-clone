@@ -5,13 +5,14 @@ import Topics from "./topics";
 
 export default function RightBar() {
   const href = useHref();
-  const shouldShow = href !== "/explore" && <SearchBar />;
+  const shouldShowSearcBar = href !== "/explore" && <SearchBar />;
+  const shouldShowTopics = href !== "/explore" && <Topics />;
 
   return (
     <aside className="w-[350px] mr-2.5 ">
-      {<SearchBar /> && shouldShow}
+      {<SearchBar /> && shouldShowSearcBar}
       <Subscribe />
-      <Topics />
+      {<Topics /> && shouldShowTopics}
     </aside>
   );
 }

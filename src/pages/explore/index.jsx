@@ -1,8 +1,8 @@
-import {  AiOutlineSetting } from "react-icons/ai";
+import { AiOutlineSetting } from "react-icons/ai";
 import SearchBar from "~/layouts/main/rightbar/searchBar";
+import Topics from "~/layouts/main/rightbar/topics";
 
 export default function Explore() {
-
   return (
     <>
       <div className="flex justify-between items-center">
@@ -14,6 +14,9 @@ export default function Explore() {
             <AiOutlineSetting className="text-4xl mr-4 mt-2 hover:bg-gray-200 hover:bg-opacity-20 rounded-full p-2" />
           </button>
         </div>
+      </div>
+      <div className="w-full h-1/2">
+        <Topics />
       </div>
     </>
   );

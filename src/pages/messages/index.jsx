@@ -1,7 +1,9 @@
+import WhereIsThis from "~/components/whereIsThis";
+
 export default function Messages() {
-	return (
-		<div>
-			messages component
-		</div>
-	)
+  return (
+    <div>
+      <WhereIsThis text={"Mesajlar"} />
+    </div>
+  );
 }

@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
+import classNames from "classnames";
+import { Link, useHref } from "react-router-dom";
 
 function Topic({ topic }) {
+  const href = useHref();
   return (
     <Link to={`/topic/${topic.topic.value}`}>
-      <div className=" bg-zinc-900 bg-opacity-85 mt-3 rounded-xl hover:bg-zinc-500 hover:bg-opacity-60 w-full">
+      <div
+        className={classNames(
+          "bg-opacity-85 mt-3 rounded-xl hover:bg-zinc-500 hover:bg-opacity-60 w-full",
+          {
+            "bg-black": href === `/explore`,
+            "bg-zinc-900": href === `/`,
+          }
+        )}
+      >
         <div className="flex flex-col justify-center items-start p-2">
           <div className="text-white text-opacity-50 font-thin text-sm">
             {topic.title}
