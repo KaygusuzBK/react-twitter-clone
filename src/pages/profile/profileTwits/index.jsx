@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import TwitForm from "../../../components/TwitForm";
+import TwitForm from "~/components/twitForm";
 
 function ProfileTwits() {
   const [activeButton, setActiveButton] = useState("Button 1");
