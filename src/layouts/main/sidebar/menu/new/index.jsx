@@ -8,13 +8,12 @@ import { BsEmojiFrown } from "react-icons/bs";
 import { AiOutlineGif } from "react-icons/ai";
 import classNames from "classnames";
 
+
 export default function New() {
   let [isOpen, setIsOpen] = useState(false);
-
   function closeModal() {
     setIsOpen(false);
   }
-
   function openModal() {
     setIsOpen(true);
   }
@@ -91,11 +90,9 @@ export default function New() {
                     </div>
                     <div className="flex flex-row justify-end items-center">
                       <button
+                        onClick={closeModal}
                         className={classNames(
-                          "px-6 py-2 rounded-full bg-blue-500 text-white",
-                          {
-                            "hover:bg-red-500 hover:bg-opacity-20": textarea,
-                          }
+                          "px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-700 hover:bg-opacity-50"
                         )}
                       >
                         Gönder

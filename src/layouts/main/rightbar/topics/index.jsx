@@ -3,7 +3,7 @@ import { topics } from "../../../../utils/consts";
 import classNames from "classnames";
 import { useHref } from "react-router-dom";
 
-function Topics() {
+function Topics({ count }) {
   const href = useHref();
   return (
     <>
@@ -18,9 +18,9 @@ function Topics() {
             İlgini çekebilecek gündemler
           </div>
           <div className="flex flex-col max-h-full overflow-y-auto -mt-2">
-            {topics.map((topic, index) => (
-              <Topic key={index} topic={topic} />
-            ))}
+            {topics.map((topic, index) =>
+              index < count ? <Topic key={index} topic={topic} /> : null
+            )}
           </div>
         </div>
       </div>

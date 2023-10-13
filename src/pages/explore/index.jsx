@@ -16,7 +16,7 @@ export default function Explore() {
         </div>
       </div>
       <div className="w-full h-1/2">
-        <Topics />
+        <Topics count={3} />
       </div>
     </>
   );

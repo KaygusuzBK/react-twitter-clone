@@ -6,7 +6,7 @@ function SearchBar() {
   const [query, setQuery] = useState("");
   return (
     <>
-      <div className="rounded-full bg-zinc-800 bg-opacity-90 flex items-center mt-2 p-2 w-full focus-within:bg-black focus-within:border focus-within:border-blue-500  focus-within:ring-blue-500 focus-within:ring-opacity-50 absolutetop-0 absoluteleft-0 z-10">
+      <div className="rounded-full bg-zinc-800 bg-opacity-90 flex items-center mt-2 p-2 w-full focus-within:bg-black focus-within:border focus-within:border-blue-500  focus-within:ring-blue-500 focus-within:ring-opacity-50 absolutetop-0 absoluteleft-0 z-10 sticky top-0">
         <button>
           <FaSearch
             className={classNames(
