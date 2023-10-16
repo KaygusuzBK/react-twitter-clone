@@ -10,7 +10,7 @@ function SearchBar() {
         <button>
           <FaSearch
             className={classNames(
-              "text-gray-400 text-lg m-1",
+              "text-gray-400 text-lg m-1 w-3 h-3",
               "hover:text-blue-500"
             )}
           />
@@ -18,7 +18,7 @@ function SearchBar() {
         <input
           type="text"
           placeholder="Ara"
-          className="bg-transparent outline-none pl-1 ml-2 w-full"
+          className="bg-transparent outline-none pl-1 ml-2 w-full font-thin text-sm "
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />

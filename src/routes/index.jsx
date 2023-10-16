@@ -8,6 +8,7 @@ import Profile from "~/pages/profile";
 import Messages from "~/pages/messages";
 import Lists from "~/pages/lists";
 import Bookmarks from "~/pages/bookmarks";
+import Trends from "~/pages/trends";
 
 const routes = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const routes = createBrowserRouter([
       {
         path: ":slug",
         element: <Profile />,
+      },
+      {
+        path: "trends",
+        element: <Trends />,
       },
       {
         path: "*",

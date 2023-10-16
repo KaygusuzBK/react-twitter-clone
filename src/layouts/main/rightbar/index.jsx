@@ -9,7 +9,7 @@ export default function RightBar() {
   const shouldShowTopics = href !== "/explore" && <Topics count={7} />;
 
   return (
-    <aside className="w-[350px] mr-2.5 ">
+    <aside className="w-[350px] mr-2.5 flex flex-col gap-3">
       {<SearchBar /> && shouldShowSearcBar}
       <Subscribe />
       {<Topics count={7} /> && shouldShowTopics}

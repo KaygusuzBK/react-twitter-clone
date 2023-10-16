@@ -7,7 +7,7 @@ function Topic({ topic }) {
     <Link to={`/topic/${topic.topic.value}`}>
       <div
         className={classNames(
-          "bg-opacity-85 mt-3 rounded-xl hover:bg-zinc-500 hover:bg-opacity-60 w-full",
+          "bg-opacity-85 mt-3 rounded-xl hover:bg-zinc-500 hover:bg-opacity-20 w-full",
           {
             "bg-black": href === `/explore`,
             "bg-zinc-900": href === `/`,

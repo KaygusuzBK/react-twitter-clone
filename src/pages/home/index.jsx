@@ -20,8 +20,8 @@ export default function Home() {
       <div style={{ width: "100%", height: "100vh" }}>
         <WVList>
           {accounts.map((account) =>
-            account.info.tweets.map((twit) => (
-              <div key={twit.id}>
+            account.info.tweets.map((twit, index) => (
+              <div key={index}>
                 <TwitForm
                   key={twit.id}
                   ımage={account.avatar}
