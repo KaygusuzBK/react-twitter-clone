@@ -22,19 +22,21 @@ export default function Explore() {
         <Topics count={4} />
         <div className="bg-zinc-500 w-full h-1 mb-2 " />
       </div>
-      {accounts.map((account) =>
-        account.info.tweets.map((twit) => (
-          <div key={twit.id}>
-            <TwitForm
-              key={twit.id}
-              ımage={account.avatar}
-              fullName={account.fullName}
-              username={account.username}
-              twit={twit}
-            />
-          </div>
-        ))
-      )}
+      <div>
+        {accounts.map((account) =>
+          account.info.tweets.map((twit) => (
+            <div key={twit.id}>
+              <TwitForm
+                key={twit.id}
+                ımage={account.avatar}
+                fullName={account.fullName}
+                username={account.username}
+                twit={twit}
+              />
+            </div>
+          ))
+        )}
+      </div>
     </>
   );
 }

@@ -9,8 +9,7 @@ function Topics({ count }) {
     <>
       <div
         className={classNames(" bg-opacity-85  rounded-xl", {
-          "bg-black": href === `/explore || /trends`,
-          "bg-zinc-900": href !== `/explore || /trends`,
+          "bg-zinc-900": href !== `/explore` && href !== `/trends`,
         })}
       >
         <div className="justify-start items-center ">
