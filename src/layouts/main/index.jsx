@@ -9,8 +9,10 @@ export default function MainLayout() {
   return (
     <>
       <div className="w-[1265px] mx-auto flex ">
-        <Sidebar />
-        <main className="flex-1 flex gap-[30px]">
+        <div className="w-[300px] fixed">
+          <Sidebar />
+        </div>
+        <main className="flex-1 flex gap-[30px] ml-[300px]">
           <main
             className={`flex-1 ${
               shouldShowRightBar

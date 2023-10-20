@@ -25,7 +25,7 @@ function Topics({ count }) {
             <div className="flex justify-center items-center p-2">
               <Link
                 to="/trends"
-                className="flex justify-center items-center text-blue-500 font-bold text-sm p-2 hover:bg-zinc-500 hover:bg-opacity-10 rounded-b-xl w-full"
+                className="flex justify-center items-center text-blue-500 font-bold text-sm py-4 hover:bg-zinc-900 hover:bg-opacity-85 rounded-b-xl w-full "
               >
                 Daha fazla göster
               </Link>

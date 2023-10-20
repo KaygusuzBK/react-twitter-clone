@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import TwitForm from "~/components/twitForm";
 
-function ProfileTwits() {
+function ProfileTwits({ account }) {
   const [activeButton, setActiveButton] = useState("Button 1");
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
-
-  const { currentAccount } = useSelector((state) => state.auth);
 
   return (
     <>
@@ -66,13 +64,14 @@ function ProfileTwits() {
             Beğeni
           </button>
         </div>
-        {currentAccount.info.tweets.map((twit) => (
+        {account.info.tweets.map((twit, index) => (
           <TwitForm
+            index={index}
             twit={twit}
             key={twit.id}
-            ımage={currentAccount.avatar}
-            fullName={currentAccount.fullName}
-            username={currentAccount.username}
+            ımage={account.avatar}
+            fullName={account.fullName}
+            username={account.username}
           />
         ))}
       </div>

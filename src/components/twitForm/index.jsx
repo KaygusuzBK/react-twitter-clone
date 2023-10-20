@@ -2,6 +2,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { FaHeart, FaRetweet } from "react-icons/fa";
 import { GoShare } from "react-icons/go";
+import { Link } from "react-router-dom";
 import ProfileAvatar from "~/pages/profile/profileInfo/profileAvatar";
 
 function TwitForm({ ımage, fullName, username, twit }) {
@@ -9,13 +10,15 @@ function TwitForm({ ımage, fullName, username, twit }) {
 
   return (
     <>
-      <div className="flex items-start w-full p-2 border-b border-zinc-700 hover:bg-zinc-950 ">
+      <div className="flex items-start w-full p-2 border border-zinc-700 hover:bg-zinc-950 ">
         <div className="w-10 h-10 ml-1 mt-4">
           <ProfileAvatar Image={ımage} />
         </div>
         <div className="flex flex-col justify-start items-start px-2 py-3 ml-1 w-full">
           <div className="flex w-full">
-            <div className="font-bold text-white">{fullName}</div>
+            <Link to={`/${username}`} className="font-bold text-white">
+              {fullName}
+            </Link>
             <div className="text-gray-500 ml-2">{username}</div>
             <div className="text-gray-500 ml-2">.</div>
             <div className="text-gray-500 ml-2">23.02.2023</div>

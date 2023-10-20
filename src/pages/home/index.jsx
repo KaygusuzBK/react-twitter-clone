@@ -17,19 +17,17 @@ export default function Home() {
       <div>
         <PostChoice />
       </div>
-      <div style={{ width: "100%", height: "100vh" }}>
+      <div>
         <WVList>
           {accounts.map((account) =>
-            account.info.tweets.map((twit, index) => (
-              <div key={index}>
-                <TwitForm
-                  key={twit.id}
-                  ımage={account.avatar}
-                  fullName={account.fullName}
-                  username={account.username}
-                  twit={twit}
-                />
-              </div>
+            account.info.tweets.map((twit) => (
+              <TwitForm
+                key={Math.random() * twit.id}
+                ımage={account.avatar}
+                fullName={account.fullName}
+                username={account.username}
+                twit={twit}
+              />
             ))
           )}
         </WVList>

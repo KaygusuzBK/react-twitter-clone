@@ -6,7 +6,7 @@ import SearchBar from "~/layouts/main/rightbar/searchBar";
 export default function Messages() {
   return (
     <>
-      <div className="h-full border-l border-r border-zinc-500 border-opacity-50 max-w-[380px] flex flex-col">
+      <div className="h-full  border-zinc-500 border-opacity-50 max-w-[380px] flex flex-col">
         <div className="flex items-center justify-between border-b border-zinc-500 border-opacity-50">
           {/* ÜST BAR */}
           <div className="flex justify-around items-center">
