@@ -67,7 +67,7 @@ function ProfileInfo({ account }) {
             </p>
           </div>
         </div>
-        <div className="flex justify-start items-center ml-3">
+        <div className="flex justify-start items-center ml-3 mb-3">
           <p className="text-sm font-light text-white hover:underline">
             {account.info.followers} takipçi
           </p>
