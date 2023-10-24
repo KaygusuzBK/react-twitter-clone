@@ -40,7 +40,6 @@ export default function New() {
     }
   };
 
-  console.log(newTweet);
 
   return (
     <>

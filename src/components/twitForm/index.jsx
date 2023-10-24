@@ -4,13 +4,19 @@ import { FaHeart, FaRetweet } from "react-icons/fa";
 import { GoShare } from "react-icons/go";
 import { Link, NavLink } from "react-router-dom";
 import ProfileAvatar from "~/pages/profile/profileInfo/profileAvatar";
+import PhotoPost from "~/components/twitForm/photo/index.jsx";
 
 function TwitForm({ ımage, fullName, username, twit }) {
   var replyLength = twit.reply.length;
 
+  var tweetTypeImage = typeof twit.tweet === "object";
+
   return (
     <>
-      <div className="flex items-start w-full p-2 border border-zinc-700 hover:bg-zinc-950 ">
+      <Link
+        to={`twit/${username}/${twit.id}`}
+        className="flex items-start w-full p-2 border border-zinc-700 hover:bg-zinc-950 "
+      >
         <NavLink to={`/${username}`} className="w-10 h-10 ml-1 mt-4">
           <ProfileAvatar Image={ımage} />
         </NavLink>
@@ -23,8 +29,16 @@ function TwitForm({ ımage, fullName, username, twit }) {
             <div className="text-gray-500 ml-2">.</div>
             <div className="text-gray-500 ml-2">23.02.2023</div>
           </div>
-          <div className="flex w-full">
-            <p>{twit.tweet}</p>
+          <div className="flex justify-start items-start w-full">
+            <div className="text-white  max-w-full ">
+              {tweetTypeImage ? (
+                <div className="w-full h-full">
+                  <PhotoPost images={twit.tweet} />
+                </div>
+              ) : (
+                <div className="text-white ">{twit.tweet}</div>
+              )}
+            </div>
           </div>
           <div className="flex justify-between items-center w-full mt-1 ml-2">
             <div className="p-2 hover:bg-blue-600 hover:bg-opacity-50 rounded-full flex items-center gap-1">
@@ -66,7 +80,7 @@ function TwitForm({ ımage, fullName, username, twit }) {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 }

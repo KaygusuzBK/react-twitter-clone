@@ -7,6 +7,7 @@ import { GoFileMedia } from "react-icons/go";
 import { AiOutlineGif } from "react-icons/ai";
 import { BsEmojiFrown } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
+import { Listbox } from "@headlessui/react";
 
 export default function Home() {
   const { accounts } = useSelector((state) => state.auth);
@@ -18,11 +19,8 @@ export default function Home() {
 
   return (
     <>
-      <div>
+      <div className="">
         <WhereIsThis text="Anasayfa" />
-      </div>
-
-      <div>
         <PostChoice />
       </div>
       <div>
@@ -68,7 +66,11 @@ export default function Home() {
               <div className="flex flex-row justify-end items-center">
                 <button
                   ref={senbBtn}
-                  className="bg-blue-500 hover:bg-blue-600 rounded-full text-white text-xs px-2 py-2 mr-5 "
+                  className="bg-blue-500 hover:bg-blue-600 rounded-full text-white text-sm px-4 py-2 mr-5"
+                  onClick={() => {
+                    textarea.current.value = "";
+                    textarea.current.blur();
+                  }}
                 >
                   Gönder
                 </button>

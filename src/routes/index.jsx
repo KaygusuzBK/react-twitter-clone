@@ -9,6 +9,7 @@ import Messages from "~/pages/messages";
 import Lists from "~/pages/lists";
 import Bookmarks from "~/pages/bookmarks";
 import Trends from "~/pages/trends";
+import TwitPage from "~/pages/twit";
 
 const routes = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const routes = createBrowserRouter([
       {
         path: "trends",
         element: <Trends />,
+      },
+      {
+        path: `twit/:slug/:id`,
+        element: <TwitPage />,
       },
       {
         path: "*",
