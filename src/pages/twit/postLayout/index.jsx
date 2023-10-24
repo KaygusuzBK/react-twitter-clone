@@ -13,7 +13,6 @@ function PostLayout({ twit, avatar, username, fullName }) {
   const senbBtn = useRef();
   const textarea = useRef();
 
-  console.log(twit);
   return (
     <>
       <div>

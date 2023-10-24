@@ -9,7 +9,7 @@ function TwitPage() {
   var href = useHref();
 
   let username = href.split("/")[2];
-  let id = href.split("/")[3];
+  let id = href.split("/")[3] - 1;
 
   const { accounts } = useSelector((state) => state.auth);
 
@@ -22,7 +22,6 @@ function TwitPage() {
       nowAccount = account;
     }
   });
-
 
   return (
     <>
