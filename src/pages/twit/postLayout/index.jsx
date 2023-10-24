@@ -7,12 +7,16 @@ import { BiBookmark } from "react-icons/bi";
 import { BsEmojiFrown } from "react-icons/bs";
 import { useState } from "react";
 import { useRef } from "react";
+import PhotoPost from "~/components/twitForm/photo/index";
 
 function PostLayout({ twit, avatar, username, fullName }) {
   const [isInputFocusedTop, setInputFocusedTop] = useState(false);
   const senbBtn = useRef();
   const textarea = useRef();
 
+  var tweetTypeImage = typeof twit.tweet === "object";
+
+  console.log(tweetTypeImage);
   return (
     <>
       <div>
@@ -32,7 +36,13 @@ function PostLayout({ twit, avatar, username, fullName }) {
         </div>
         {/* text */}
         <div className="flex justify-start items-start ml-4 mt-1">
-          <div className="text-white break-words w-full">{twit.tweet}</div>
+          {tweetTypeImage ? (
+            <div className="w-full h-full">
+              <PhotoPost images={twit.tweet} />
+            </div>
+          ) : (
+            <div className="text-white break-words w-full">{twit.tweet}</div>
+          )}
         </div>
         {/* Tarih */}
         <div>

@@ -7,15 +7,12 @@ import PostLayout from "~/pages/twit/postLayout";
 function TwitPage() {
   const { slug } = useParams();
   var href = useHref();
-
   let username = href.split("/")[2];
   let id = href.split("/")[3] - 1;
-
   const { accounts } = useSelector((state) => state.auth);
-
   var tweet = null;
   var nowAccount = null;
-
+  
   accounts.forEach((account) => {
     if (account.username === username) {
       tweet = account.info.tweets[id];
