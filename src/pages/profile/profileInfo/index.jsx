@@ -28,12 +28,16 @@ function ProfileInfo({ account }) {
           onClick={() => {}}
           className={classNames("w-full h-48 object-cover rounded-sm", {
             "cursor-pointer": true,
-          })} 
+          })}
         />
       </div>
       <div className="flex justify-between items-center">
-        <div className="ml-5 w-36 h-36 -mt-20">
-          <ProfileAvatar Image={account.avatar} />
+        <div className="ml-5 w-36 h-36 -mt-20 max-h-36 max-w-36">
+          <img
+            src={account.avatar}
+            alt="profile"
+            className="w-full h-full object-cover rounded-full border-2 border-black"
+          />
         </div>
         <div className="mr-6 -mt-1">
           <button className="bg-black text-white text-md border font-medium py-1 px-2 rounded-full">

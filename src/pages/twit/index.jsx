@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import WhereIsThis from "~/components/whereIsThis";
 import { FaArrowLeft } from "react-icons/fa";
-import { useHref, useParams } from "react-router-dom";
+import { NavLink, useHref, useParams } from "react-router-dom";
 import PostLayout from "~/pages/twit/postLayout";
 
 function TwitPage() {
@@ -12,7 +12,7 @@ function TwitPage() {
   const { accounts } = useSelector((state) => state.auth);
   var tweet = null;
   var nowAccount = null;
-  
+
   accounts.forEach((account) => {
     if (account.username === username) {
       tweet = account.info.tweets[id];
@@ -23,7 +23,9 @@ function TwitPage() {
   return (
     <>
       <div className="flex justify-start items-center">
-        <FaArrowLeft className="text-white text-md rounded-full border border-black m-3 w-10 h-10 hover:bg-gray-700 hover:bg-opacity-80 p-3 -mr-2" />
+        <NavLink to={"/"}>
+          <FaArrowLeft className="text-white text-md rounded-full border border-black m-3 w-10 h-10 hover:bg-gray-700 hover:bg-opacity-80 p-3 -mr-2" />
+        </NavLink>
         <WhereIsThis text={"Gönderi"} />
       </div>
       <div>

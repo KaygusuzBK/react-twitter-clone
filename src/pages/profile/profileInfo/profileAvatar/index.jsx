@@ -5,7 +5,7 @@ function ProfileAvatar({ Image }) {
         <img
           src={Image}
           alt="profile"
-          className="w-full h-full object-cover rounded-full border-2 border-black "
+          className="w-full h-full object-cover rounded-full border-2 border-black"
         />
       </div>
     </>

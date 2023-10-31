@@ -160,6 +160,7 @@ const initialState = {
     },
   },
   accounts: [
+    // KaygusuzBK
     {
       id: 1,
       username: "@KaygusuzBK",
@@ -324,6 +325,7 @@ const initialState = {
         ],
       },
     },
+    // BlueEjders
     {
       id: 2,
       username: "@BlueEjder2",
@@ -512,6 +514,7 @@ const initialState = {
         ],
       },
     },
+    // Portakal
     {
       id: 3,
       username: "@Portakal",
@@ -707,7 +710,6 @@ const auth = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    // state manipule etme metodlari
     _addAccount: (state, action) => {
       state.accounts.push(action.payload);
     },
@@ -725,5 +727,6 @@ const auth = createSlice({
   },
 });
 
-export const { _addAccount, _setCurrentAccount, _removeAccount } = auth.actions;
+export const { _addAccount, _setCurrentAccount, _removeAccount, _addTwit } =
+  auth.actions;
 export default auth.reducer;

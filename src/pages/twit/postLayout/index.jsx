@@ -16,7 +16,6 @@ function PostLayout({ twit, avatar, username, fullName }) {
 
   var tweetTypeImage = typeof twit.tweet === "object";
 
-  console.log(tweetTypeImage);
   return (
     <>
       <div>

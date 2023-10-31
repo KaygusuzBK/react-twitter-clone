@@ -1,13 +1,14 @@
 import WhereIsThis from "~/components/whereIsThis";
 import PostChoice from "./postChoice";
 import TwitForm from "~/components/twitForm";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { WVList } from "virtua";
 import { GoFileMedia } from "react-icons/go";
 import { AiOutlineGif } from "react-icons/ai";
 import { BsEmojiFrown } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
-import { Listbox } from "@headlessui/react";
+import { _setCurrentAccount, _addTwit } from "~/store/auth/index";
+import { object } from "prop-types";
 
 export default function Home() {
   const { accounts } = useSelector((state) => state.auth);
@@ -16,13 +17,18 @@ export default function Home() {
   const [isInputFocusedBot, setInputFocusedBot] = useState(false);
   const senbBtn = useRef();
   const textarea = useRef();
+  const dispatch = useDispatch();
+
+  let twitText = textarea.current?.value;
 
   return (
     <>
+      {/* ÜST BÖLÜM */}
       <div className="">
         <WhereIsThis text="Anasayfa" />
         <PostChoice />
       </div>
+      {/* TWit Input */}
       <div>
         <div className=" flex justify-start items-start ml-2 mt-1">
           <div className="flex justify-start items-start w-10 h-10 mt-2 ml-1">
@@ -41,6 +47,7 @@ export default function Home() {
               </button>
             )}
             <textarea
+              ref={textarea}
               onFocus={() => {
                 setInputFocusedTop(true);
                 setInputFocusedBot(true);
@@ -49,7 +56,6 @@ export default function Home() {
                 setInputFocusedTop(false);
                 setInputFocusedBot(false);
               }}
-              ref={textarea}
               className="bg-black p-4 text-white placeholder-white placeholder-opacity-50 h-16 focus-within:outline-none resize-none"
               placeholder="Neler oluyor?"
             />
@@ -63,14 +69,11 @@ export default function Home() {
                 <BsEmojiFrown className="text-blue-500 rounded-lg h-8 w-8 hover:bg-blue-500 hover:bg-opacity-20 p-2 " />
                 <GoFileMedia className="text-blue-500 rounded-lg h-8 w-8 hover:bg-blue-500 hover:bg-opacity-20 p-2 " />
               </div>
+              {/* BUTTON */}
               <div className="flex flex-row justify-end items-center">
                 <button
                   ref={senbBtn}
                   className="bg-blue-500 hover:bg-blue-600 rounded-full text-white text-sm px-4 py-2 mr-5"
-                  onClick={() => {
-                    textarea.current.value = "";
-                    textarea.current.blur();
-                  }}
                 >
                   Gönder
                 </button>
@@ -79,6 +82,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* LİSTE */}
       <div>
         <WVList>
           {accounts.map((account) =>
