@@ -1,0 +1,693 @@
+{
+  "currentAccount": {
+    "id": 1,
+    "username": "@KaygusuzBK",
+    "fullName": "Kaygusuzbk",
+    "avatar": "https://pbs.twimg.com/profile_images/1655678021947252744/HxRdHd_S_400x400.jpg",
+    "backgroundImage": "https://fastly.picsum.photos/id/108/401/301.jpg?hmac=l9HRiXTAD02eTpg-6EVJc_PQv_HU20nrzbgMnWRaLp0",
+    "info": {
+      "birthday": "23.02.2001",
+      "bio": "💻",
+      "createdAt": "09.10.2023",
+      "followers": 100,
+      "following": 100,
+      "tweets": [
+        {
+          "id": 1,
+          "tweet": "Merhaba",
+          "like": 100,
+          "retweet": 100,
+          "comment": 100,
+          "date": "12.12.2021",
+          "reply": [
+            {
+              "id": 1,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 2,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 3,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "tweet": "Biz",
+          "like": 100,
+          "retweet": 100,
+          "comment": 100,
+          "date": "12.12.2021",
+          "reply": [
+            {
+              "id": 1,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 2,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 3,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "tweet": "Dostuz",
+          "like": 100,
+          "retweet": 100,
+          "comment": 100,
+          "date": "12.12.2021",
+          "reply": [
+            {
+              "id": 1,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 2,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 3,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "tweet": [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300"
+          ],
+          "like": 100,
+          "retweet": 100,
+          "comment": 100,
+          "date": "12.12.2021",
+          "reply": [
+            {
+              "id": 1,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 2,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            },
+            {
+              "id": 3,
+              "tweet": "Merhaba",
+              "like": 100,
+              "retweet": 100,
+              "comment": 100,
+              "date": "12.12.2021"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "accounts": [
+    {
+      "id": 1,
+      "username": "@KaygusuzBK",
+      "fullName": "Kaygusuzbk",
+      "avatar": "https://pbs.twimg.com/profile_images/1655678021947252744/HxRdHd_S_400x400.jpg",
+      "backgroundImage": "https://fastly.picsum.photos/id/108/401/301.jpg?hmac=l9HRiXTAD02eTpg-6EVJc_PQv_HU20nrzbgMnWRaLp0",
+      "info": {
+        "birthday": "23.02.2001",
+        "bio": "💻",
+        "createdAt": "09.10.2023",
+        "followers": 100,
+        "following": 100,
+        "tweets": [
+          {
+            "id": 1,
+            "tweet": "Merhaba",
+            "like": 400,
+            "retweet": 200,
+            "comment": 300,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 200,
+                "comment": 300,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "tweet": "Ben bunu bilemem aynı bomb Gibi gelir sana belki de aynı ton Dibi delik gelebilir ama aynı fon Kendini bilemez montofon Ve monoton yaşar hep alt aynı don Anlatırım ben derdimi yalnız Ey, bi' mini microphone",
+            "like": 600,
+            "retweet": 700,
+            "comment": 500,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "tweet": [
+              "https://picsum.photos/500/300",
+              "https://picsum.photos/300/500",
+              "https://picsum.photos/200/300",
+              "https://picsum.photos/500/500",
+              "https://picsum.photos/500/300",
+              "https://picsum.photos/300/500",
+              "https://picsum.photos/200/300",
+              "https://picsum.photos/500/500"
+            ],
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "username": "@BlueEjder2",
+      "fullName": "IrmakArtar",
+      "avatar": "https://pbs.twimg.com/profile_images/1552719294684958721/cXzlTEgL_400x400.jpg",
+      "backgroundImage": "https://fastly.picsum.photos/id/412/400/200.jpg?hmac=W_qMRvAguhcdbl5a2Yk8CSGaRhTidqH5d_9SDPumGYA",
+      "info": {
+        "birthday": "12.02.2001",
+        "bio": "💻2",
+        "createdAt": "12.10.2023",
+        "followers": 200,
+        "following": 300,
+        "tweets": [
+          {
+            "id": 1,
+            "tweet": "Merhaba",
+            "like": 200,
+            "retweet": 300,
+            "comment": 400,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "tweet": "Biz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "username": "@Portakal",
+      "fullName": "PORTAKAL",
+      "avatar": "https://pbs.twimg.com/media/Ffr71tKWAAELX4N?format=jpg&name=small",
+      "backgroundImage": "https://fastly.picsum.photos/id/412/400/200.jpg?hmac=W_qMRvAguhcdbl5a2Yk8CSGaRhTidqH5d_9SDPumGYA",
+      "info": {
+        "birthday": "12.02.2001",
+        "bio": "MİYAV MİYAV",
+        "createdAt": "12.10.2023",
+        "followers": 999,
+        "following": 999,
+        "tweets": [
+          {
+            "id": 1,
+            "tweet": "Merhaba",
+            "like": 200,
+            "retweet": 300,
+            "comment": 400,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "tweet": "Biz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "tweet": "Dostuz",
+            "like": 100,
+            "retweet": 100,
+            "comment": 100,
+            "date": "12.12.2021",
+            "reply": [
+              {
+                "id": 1,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 2,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              },
+              {
+                "id": 3,
+                "tweet": "Merhaba",
+                "like": 100,
+                "retweet": 100,
+                "comment": 100,
+                "date": "12.12.2021"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 function PhotoPost({ images }) {
   const displayImages = images.slice(0, 4);
-  const remainingCount = images.length - 4;
+  const remainingCount = images.length - 4; 
 
   const ımageRef = useRef(null);
 

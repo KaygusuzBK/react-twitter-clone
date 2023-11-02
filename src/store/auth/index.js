@@ -1,3 +1,4 @@
+// import { getCurrentAccount } from "~/services/currentAccount/index.js";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -723,6 +724,9 @@ const auth = createSlice({
     },
     _setCurrentAccount: (state, action) => {
       state.currentAccount = action.payload;
+    },
+    _addTwit: (state, action) => {
+      state.currentAccount.info.tweets.push(action.payload);
     },
   },
 });
