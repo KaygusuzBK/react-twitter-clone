@@ -7,61 +7,29 @@ import { GoFileMedia } from "react-icons/go";
 import { AiOutlineGif } from "react-icons/ai";
 import { BsEmojiFrown } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
-import { _setCurrentAccount, _addTwit } from "~/store/auth/index";
-import { setCurrentAccount } from "~/store/auth/actions";
+import { fetchCurrentAccount, fetchAccounts } from "~/store/auth";
 
 export default function Home() {
   const { accounts } = useSelector((state) => state.auth);
   const { currentAccount } = useSelector((state) => state.auth);
+
   const [isInputFocusedTop, setInputFocusedTop] = useState(false);
   const [isInputFocusedBot, setInputFocusedBot] = useState(false);
+
   const senbBtn = useRef();
   const textarea = useRef();
   const dispatch = useDispatch();
 
-  let twitText = textarea.current?.value;
+  useEffect(() => {
+    dispatch(fetchCurrentAccount());
+  }, [dispatch]);
 
-  // const twit = {
-  //   id: 31,
-  //   tweet: "Merhaba",
-  //   like: 100,
-  //   retweet: 100,
-  //   comment: 100,
-  //   date: "12.12.2021",
-  //   reply: [
-  //     {
-  //       id: 1,
-  //       tweet: "Merhaba",
-  //       like: 100,
-  //       retweet: 100,
-  //       comment: 100,
-  //       date: "12.12.2021",
-  //     },
-  //     {
-  //       id: 2,
-  //       tweet: "Merhaba",
-  //       like: 100,
-  //       retweet: 100,
-  //       comment: 100,
-  //       date: "12.12.2021",
-  //     },
-  //     {
-  //       id: 3,
-  //       tweet: "Merhaba",
-  //       like: 100,
-  //       retweet: 100,
-  //       comment: 100,
-  //       date: "12.12.2021",
-  //     },
-  //   ],
-  // };
+  useEffect(() => {
+    dispatch(fetchAccounts());
+  }, [dispatch]);
 
-  // useEffect(() => {
-  //   dispatch(_addTwit(twit));
-  // }, []);
-
-  // console.log(currentAccount);
-  // console.log(currentAccount.info.tweets);
+  console.log(accounts);
+  console.log(currentAccount);
   return (
     <>
       {/* ÜST BÖLÜM */}

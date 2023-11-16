@@ -2,20 +2,16 @@ import axios from "axios";
 
 const API_URL = "http://localhost:3000/accounts";
 
-const getAccounts = () => {
+function getAccounts() {
   return axios.get(API_URL);
-};
+}
 
-const getAccount = (id) => {
+function getAccount(id) {
   return axios.get(`${API_URL}/${id}`);
-};
+}
 
-const getAccountTweets = (id) => {
+function getAccountTweets(id) {
   return axios.get(`${API_URL}/${id}/info/tweets`);
-};
+}
 
-export default {
-  getAccount,
-  getAccounts,
-  getAccountTweets,
-};
+export { getAccount, getAccounts, getAccountTweets };
