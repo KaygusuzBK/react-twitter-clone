@@ -7,18 +7,39 @@ import { useSelector } from "react-redux";
 import { BsEmojiFrown } from "react-icons/bs";
 import { AiOutlineGif } from "react-icons/ai";
 import classNames from "classnames";
-
+import axios from "axios";
 
 export default function New() {
   let [isOpen, setIsOpen] = useState(false);
+  const { currentAccount } = useSelector((state) => state.auth);
+  const textarea = useRef();
+  const senbBtn = useRef();
+
+  const [newTweet, setNewTweet] = useState({
+    like: 0,
+    retweet: 0,
+    comment: 0,
+    reply: [],
+  });
+
   function closeModal() {
     setIsOpen(false);
   }
   function openModal() {
     setIsOpen(true);
   }
-  const { currentAccount } = useSelector((state) => state.auth);
-  var textarea = useRef();
+
+  const btnOnclick = () => {
+    if (textarea.current?.value.length > 0) {
+      setNewTweet({
+        ...newTweet,
+        tweet: textarea.current?.value,
+        date: new Date().toLocaleDateString(),
+      });
+      closeModal();
+    }
+  };
+
 
   return (
     <>
@@ -62,7 +83,7 @@ export default function New() {
                       <button onClick={closeModal}>
                         <FaTimes className="text-white rounded-full hover:bg-zinc-500 hover:bg-opacity-50 p-1 w-6 h-6" />
                       </button>
-                      <button className="text-blue-500 font-bold">
+                      <button className="text-blue-500 font-bold hover:bg-blue-500 hover:bg-opacity-20 rounded-full p-2">
                         Tasklaklar
                       </button>
                     </div>
@@ -90,10 +111,9 @@ export default function New() {
                     </div>
                     <div className="flex flex-row justify-end items-center">
                       <button
-                        onClick={closeModal}
-                        className={classNames(
-                          "px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-700 hover:bg-opacity-50"
-                        )}
+                        ref={senbBtn}
+                        onClick={btnOnclick}
+                        className="bg-blue-500 hover:bg-blue-600 rounded-full text-white font-bold py-2 px-4"
                       >
                         Gönder
                       </button>
