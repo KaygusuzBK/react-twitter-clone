@@ -7,11 +7,13 @@ import { GoFileMedia } from "react-icons/go";
 import { AiOutlineGif } from "react-icons/ai";
 import { BsEmojiFrown } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
-import { fetchCurrentAccount, fetchAccounts } from "~/store/auth";
+import { fetchAccounts } from "~/store/auth";
+import { fetchAccount } from "~/store/auth";
+import { _addTwit } from "~/store/auth";
 
 export default function Home() {
   const { accounts } = useSelector((state) => state.auth);
-  const { currentAccount } = useSelector((state) => state.auth);
+  const { account } = useSelector((state) => state.auth);
 
   const [isInputFocusedTop, setInputFocusedTop] = useState(false);
   const [isInputFocusedBot, setInputFocusedBot] = useState(false);
@@ -20,16 +22,23 @@ export default function Home() {
   const textarea = useRef();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCurrentAccount());
-  }, [dispatch]);
+  const addTwit = () => {
+    const twit = {
+      id: Math.random() * 100,
+      tweet: textarea.current.value,
+      date: new Date().toLocaleString(),
+      likes: 0,
+      retweet: 0,
+      comments: [],
+    };
+    dispatch(_addTwit(twit));
+    textarea.current.value = "";
+  };
 
   useEffect(() => {
     dispatch(fetchAccounts());
   }, [dispatch]);
 
-  console.log(accounts);
-  console.log(currentAccount);
   return (
     <>
       {/* ÜST BÖLÜM */}
@@ -42,7 +51,7 @@ export default function Home() {
         <div className=" flex justify-start items-start ml-2 mt-1">
           <div className="flex justify-start items-start w-10 h-10 mt-2 ml-1">
             <img
-              src={currentAccount.avatar}
+              src={account?.avatar}
               className="rounded-full w-full h-full object-cover"
             />
           </div>
@@ -83,6 +92,7 @@ export default function Home() {
                 <button
                   ref={senbBtn}
                   className="bg-blue-500 hover:bg-blue-600 rounded-full text-white text-sm px-4 py-2 mr-5"
+                  onClick={addTwit}
                 >
                   Gönder
                 </button>
@@ -91,7 +101,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* LİSTE */}
       <div>
         <WVList>
           {accounts.map((account) =>

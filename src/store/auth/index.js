@@ -1,24 +1,21 @@
-import { getCurrentAccount } from "~/services/currentAccount/index.js";
-import { getAccounts } from "~/services/accounts/index.js";
-import axios from "axios";
+import { getAccount, getAccounts } from "~/services/accounts/index.js";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import reduxThunk from "redux-thunk";
 
 const initialState = {
-  currentAccount: {},
   accounts: [],
+  account: [],
 };
 
-// CURRENT ACCOUNT
-export const fetchCurrentAccount = createAsyncThunk(
-  "accounts/fetchCurrentAccount",
+// ACCOUNTS
+export const fetchAccount = createAsyncThunk(
+  "accounts/fetchAccount",
   async () => {
-    const response = await getCurrentAccount();
+    const response = await getAccount(1);
+    console.log(response);
     return response.data;
   }
 );
 
-// ACCOUNTS
 export const fetchAccounts = createAsyncThunk(
   "accounts/fetchAccounts",
   async () => {
@@ -31,17 +28,26 @@ const auth = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    _setCurrentAccount(state, action) {
-      state.currentAccount = action.payload;
-    },
     _setAccounts(state, action) {
-      // kullanmadım ama kalsın belki lazım olur
       state.accounts = action.payload;
     },
+    _setAccount(state, action) {
+      state.account = action.payload;
+    },
+    _setTweets(state, action) {
+      state.tweets = action.payload;
+    },
+    _addTwit(state, action) {
+      state.accounts.info.tweets.push(action.payload);
+    },
+    // },
+    // _lıkeTwit(state, action) {
+    //   state.currentAccount.info.tweets[action.payload].like++;
+    // },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchCurrentAccount.fulfilled, (state, action) => {
-      state.currentAccount = action.payload;
+    builder.addCase(fetchAccount.fulfilled, (state, action) => {
+      state.accounts = action.payload;
     });
     builder.addCase(fetchAccounts.fulfilled, (state, action) => {
       state.accounts = action.payload;
@@ -49,5 +55,5 @@ const auth = createSlice({
   },
 });
 
-export const { _setCurrentAccount } = auth.actions;
+export const { _setTweets, _setAccounts, _addTwit } = auth.actions;
 export default auth.reducer;

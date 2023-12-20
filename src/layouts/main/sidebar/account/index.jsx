@@ -1,6 +1,6 @@
 import {Popover, Transition} from "@headlessui/react";
 import {useAccount} from "~/store/auth/hooks";
-import More from "~/layouts/main/sidebar/account/more";
+// import More from "~/layouts/main/sidebar/account/more";
 
 export default function Account() {
 
@@ -37,7 +37,7 @@ export default function Account() {
 					<Popover.Panel
 						className="absolute bottom-[80px] -translate-y-2 py-3 w-[300px] z-[1] left-1/2 -translate-x-1/2 bg-black shadow-box rounded-2xl">
 						{({ close }) => (
-							<More close={close}/>
+							{/* <More close={close}/> */}
 						)}
 					</Popover.Panel>
 				</Transition>

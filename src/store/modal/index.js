@@ -138,9 +138,6 @@ const auth = createSlice({
         this._setCurrentAccount(false);
       }
     },
-    _setCurrentAccount: (state, action) => {
-      state.currentAccount = action.payload;
-    },
   },
 });
 

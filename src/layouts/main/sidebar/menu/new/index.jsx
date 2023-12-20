@@ -11,7 +11,7 @@ import axios from "axios";
 
 export default function New() {
   let [isOpen, setIsOpen] = useState(false);
-  const { currentAccount } = useSelector((state) => state.auth);
+  const { account } = useSelector((state) => state.auth);
   const textarea = useRef();
   const senbBtn = useRef();
 
@@ -39,7 +39,6 @@ export default function New() {
       closeModal();
     }
   };
-
 
   return (
     <>
@@ -91,7 +90,7 @@ export default function New() {
                   {/* MERKEZ */}
                   <div className="flex  mt-5">
                     <img
-                      src={currentAccount.avatar}
+                      src={account.avatar}
                       className="w-10 h-10 rounded-full m-1"
                     />
                     <textarea
