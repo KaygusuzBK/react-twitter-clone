@@ -18,7 +18,7 @@ function PostChoice() {
           className={classNames(
             "text-zinc-400 hover:bg-zinc-900 bg-opacity-60 w-1/2",
             {
-              "border-b-2 border-blue-500 text-white font-extrabold":
+              "border-b-4 border-blue-500 text-white font-extrabold -mb-0.5":
                 activeBtn === 0,
             }
           )}
@@ -31,7 +31,7 @@ function PostChoice() {
           className={classNames(
             "text-zinc-400 hover:bg-zinc-900 bg-opacity-60 w-1/2",
             {
-              "border-b-2 border-blue-500 text-white text-opacity-100 font-extrabold":
+              "border-b-4 border-blue-500 text-white font-extrabold -mb-0.5":
                 activeBtn === 1,
             }
           )}

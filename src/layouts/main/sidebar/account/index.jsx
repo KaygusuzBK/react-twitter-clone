@@ -1,6 +1,6 @@
 import {Popover, Transition} from "@headlessui/react";
 import {useAccount} from "~/store/auth/hooks";
-import More from "~/layouts/main/sidebar/account/more";
+// import More from "~/layouts/main/sidebar/account/more";
 
 export default function Account() {
 
@@ -12,7 +12,7 @@ export default function Account() {
 				<Popover.Button
 					className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left items-center outline-none"
 				>
-					<img src={account.avatar} className="w-10 h-10 rounded-full" alt=""/>
+					<img src={account.avatar} className="w-10 h-10 rounded-full object-cover" alt=""/>
 					<div className="mx-3 text-[15px]">
 						<h6 className="font-bold leading-[20px]">{account.fullName}</h6>
 						<div className="text-[#71767b]">
@@ -37,7 +37,7 @@ export default function Account() {
 					<Popover.Panel
 						className="absolute bottom-[80px] -translate-y-2 py-3 w-[300px] z-[1] left-1/2 -translate-x-1/2 bg-black shadow-box rounded-2xl">
 						{({ close }) => (
-							<More close={close}/>
+							{/* <More close={close}/> */}
 						)}
 					</Popover.Panel>
 				</Transition>

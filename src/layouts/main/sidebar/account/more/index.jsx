@@ -24,7 +24,7 @@ export default function More({ close }) {
             }
           )}
         >
-          <img src={account.avatar} className="w-10 h-10 rounded-full" alt="" />
+          <img src={account.avatar} className="w-10 h-10 rounded-full object-cover" alt="" />
           <div className="mx-3 flex-1 text-[15px]">
             <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
             <div className="text-[#71767b]">@{account.username}</div>

@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import TwitForm from "~/components/twitForm";
 
-function ProfileTwits() {
+function ProfileTwits({ account }) {
+
+  
   const [activeButton, setActiveButton] = useState("Button 1");
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
 
-  const { currentAccount } = useSelector((state) => state.auth);
-
   return (
     <>
-      <div>
         <div className="w-full flex  border-b border-zinc-700">
           <button
             className={`w-1/5 p-3 hover:bg-zinc-700 hover:bg-opacity-50  ${
@@ -66,16 +65,16 @@ function ProfileTwits() {
             Beğeni
           </button>
         </div>
-        {currentAccount.info.tweets.map((twit) => (
-          <TwitForm
+        {account?.info?.tweets?.map((twit) => (
+          <TwitForm 
+            key={Math.random() * twit.id}
+            ımage={account.avatar}
+            fullName={account.fullName}
+            username={account.username}
             twit={twit}
-            key={twit.id}
-            ımage={currentAccount.avatar}
-            fullName={currentAccount.fullName}
-            username={currentAccount.username}
           />
-        ))}
-      </div>
+        ))
+        }
     </>
   );
 }

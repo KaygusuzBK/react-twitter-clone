@@ -20,7 +20,7 @@ export default function Explore() {
       </div>
       <div className="w-full ">
         <Topics count={4} />
-        <div className="bg-zinc-500 w-full h-1 mb-2 " />
+        <div className="bg-zinc-500 w-full h-1  " />
       </div>
       <div>
         {accounts.map((account) =>

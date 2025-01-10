@@ -8,7 +8,7 @@ function Topics({ count }) {
   return (
     <>
       <div
-        className={classNames(" bg-opacity-85  rounded-xl", {
+        className={classNames(" bg-opacity-85  rounded-xl p-2", {
           "bg-zinc-900": href !== `/explore` && href !== `/trends`,
         })}
       >
@@ -22,10 +22,10 @@ function Topics({ count }) {
             )}
           </div>
           {count < topics.length ? (
-            <div className="flex justify-center items-center p-2">
+            <div className="flex justify-center items-center p-2 hover:bg-zinc-500 hover:bg-opacity-25 rounded">
               <Link
                 to="/trends"
-                className="flex justify-center items-center text-blue-500 font-bold text-sm p-2 hover:bg-zinc-500 hover:bg-opacity-10 rounded-b-xl w-full"
+                className="flex justify-center items-center text-blue-500 font-bold text-sm py-4 rounded-b-xl w-full "
               >
                 Daha fazla göster
               </Link>

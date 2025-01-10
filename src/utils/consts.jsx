@@ -135,7 +135,9 @@ export const mainMenu = [
     },
   },
   {
-    path: "/verified",
+    path: () => {
+      return `/${store.getState()?.auth?.currentAccount?.username}`;
+    },
     title: "Onaylanmış",
     icon: {
       active: (
